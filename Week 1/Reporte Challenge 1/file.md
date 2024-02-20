@@ -14,7 +14,7 @@ La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara
 
 **Nodo process:**
 1. Diseñe un segundo nodo llamado “proceso” que se suscriba a “/señal” y Temas “/tiempo”.
-2. Procese la señal recibida de la siguiente manera
+2. Procese la señal recibida de la siguiente manera /n
 • Compensa la señal recibida (g 𝑡 = f(t) + 𝛼) de modo que quede positivo para siempre 𝑡 ≥ 0 ,
 • Reducir la amplitud de la señal recibida a la mitad.
 • Agregar un cambio de fase a la señal recibida (como parámetro de usuario o variable) a la señal original.
