@@ -1,12 +1,12 @@
 # Week 1: Mini challenge
 
-## Descripción del challenge:
+## Descripción
 
 La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara como un simple generador de señales lo que tendra como objetivo generar una señal senoidal. El segundo nodo actuara como un proceso en el que se tomara la señal generada por el nodo anterior y lo va a modificar de tal forma que se tenga la señal procesada. Las señales tendran que trazarse con ayuda de la funcion "rqt_plot" donde se necesita visualizar la primera señal senoidal y la señal ya procesada.
 
 
 
-**Nodo Signal_generator:**
+* **Nodo Signal_generator:**
 1. Cree un nuevo paquete llamado "courseworks" (std_msgs y rclpy)
 2. Crea un nodo llamado "signal_generator" para generar un onda senoidal con respecto al tiempo, es decir, y = f(t) = sin(𝑡).
 3. Publicar el resultado utilizando un ROS estándar Float32mensaje a un tema llamado “/señal”.
