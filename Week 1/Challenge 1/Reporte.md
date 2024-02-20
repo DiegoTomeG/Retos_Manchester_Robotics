@@ -1,6 +1,6 @@
 # Week 1: Mini challenge
 
-### Descripción del challenge:
+## Descripción del challenge:
 
 La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara como un simple generador de señales lo que tendra como objetivo generar una señal senoidal. El segundo nodo actuara como un proceso en el que se tomara la señal generada por el nodo anterior y lo va a modificar de tal forma que se tenga la señal procesada. Las señales tendran que trazarse con ayuda de la funcion "rqt_plot" donde se necesita visualizar la primera señal senoidal y la señal ya procesada.
 
