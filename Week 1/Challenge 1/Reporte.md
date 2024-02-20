@@ -4,6 +4,8 @@
 
 La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara como un simple generador de señales lo que tendra como objetivo generar una señal senoidal. El segundo nodo actuara como un proceso en el que se tomara la señal generada por el nodo anterior y lo va a modificar de tal forma que se tenga la señal procesada. Las señales tendran que trazarse con ayuda de la funcion "rqt_plot" donde se necesita visualizar la primera señal senoidal y la señal ya procesada.
 
+
+
 **Nodo Signal_generator:**
 1. Cree un nuevo paquete llamado "courseworks" (std_msgs y rclpy)
 2. Crea un nodo llamado "signal_generator" para generar un onda senoidal con respecto al tiempo, es decir, y = f(t) = sin(𝑡).
@@ -11,6 +13,8 @@ La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara
 4. Publica la hora 𝑡 en otro tema llamado “/time” utilizando el mismo tipo de mensaje.
 5. Utilice una frecuencia de 10 Hz para este nodo.
 6. Imprima el resultado en el terminal usando rospy.loginfo
+
+
 
 **Nodo process:**
 1. Diseñe un segundo nodo llamado “proceso” que se suscriba a “/señal” y Temas “/tiempo”.
