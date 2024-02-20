@@ -2,11 +2,11 @@
 
 ## Resumen
 
-Es la descripción breve de los elementos más notables del proceso de investigación llevado a cabo.
+En este reporte se incluye el proceso para familiarizarse el funcionamiento de ROS2 (Robot Operative System). Se incluye un ejemplo que aborda el uso de nodos y tópicos para simular un ambiente de comunicación entre dispositivos. Concretamente, se han creado nodos (entrada y salida de una señal senoidal) que 
 
 ## Objetivos
 
-Describir el objetivo general y los objetivos particulares del reto.
+Experimentar y familiarizarse con el ambiente de ROS2 para crear un entorno de comunicación, aplicando por primera ocasión conceptos como nodos y tópicos. 
 
 ## Introducción
 
