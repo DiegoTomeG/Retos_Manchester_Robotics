@@ -27,6 +27,6 @@ La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara
 5. El resultado debe imprimirse en el terminal.
 6. La señal resultante debe publicarse mediante el mensaje Float32 en un tema llamado “/proc_signal”
 
+<p align="center"><img src="![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/dfe8ea13-ff71-4671-859f-8800cf97baf8)" alt="ROS Basics" width="400" border="10"/></p>
 
-![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/dfe8ea13-ff71-4671-859f-8800cf97baf8)
 
