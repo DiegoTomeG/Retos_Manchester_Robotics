@@ -90,7 +90,7 @@ Pero, ¿qué es un launch file? De acuerdo con The Robotics Back-End (2019), un 
 Para implementar un launch file a nuestro programa, utilizamos la información brindada por Manchester Robotics, en conjunto con información encontrada en algunos foros, etc. 
 
 1. Crearemos una carpeta para el launch file dentro de nuestro paquete (Manchester Robotics, 2024): 
-c
+```
 $ cd Challenge1/src/courseworks
 $ mkdir launch
 $ cd launch
