@@ -78,7 +78,7 @@ $ source install/setup.bash
 ```
 Finalmente, para ejecutar el contenido dentro del nodo: 
 ```
-$ sros2 courseworks signal_generator 
+$ ros2 courseworks signal_generator 
 ```
 
 
