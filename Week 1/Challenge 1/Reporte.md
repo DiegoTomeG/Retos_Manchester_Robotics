@@ -65,7 +65,7 @@ Pero, ¿qué es un launch file? De acuerdo con The Robotics Back-End (2019), un 
 Para implementar un launch file a nuestro programa, utilizamos la información brindada por Manchester Robotics, en conjunto con información encontrada en algunos foros, etc. 
 
 1. Crearemos una carpeta para el launch file dentro de nuestro paquete (Manchester Robotics, 2024): 
-```
+c
 $ cd Challenge1/src/courseworks
 $ mkdir launch
 $ cd launch
@@ -79,13 +79,30 @@ $ chmod +x plotter_launch.py
 							
 2. De igual forma, tenemos que agregar la siguiente línea al archivo package.xml: ```<exec_depend>ros2launch</exec_depend> ``` (Manchester Robotics, 2024).
 
-   <p align="center">
-  <img src= "https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/128020246/9dd7d54c-c870-4fe5-b166-4bf998ddcbd4" width="450"> 
-</p>
-<p align="center">
-Modificiaciones al archivo package.xml
-</p>
+``` python
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>courseworks</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="pamelahdzmontero@todo.todo">pamelahdzmontero</maintainer>
+  <license>TODO: License declaration</license>
 
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <exec_depend>ros2launch</exec_depend> #Agregamos línea de código
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+```
 
 3. Dentro del archivo setup.py, específicamente dentro de data_files, agregamos las siguientes líneas de código (Manchester Robotics, 2024): 
 ``` python
