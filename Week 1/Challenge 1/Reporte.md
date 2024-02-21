@@ -17,9 +17,8 @@ Este trabajo aborda la comunicación básica en ROS 2, lo cual es fundamental pa
 La comunicación en ROS se basa en un modelo de intercambio de mensajes entre nodos. Los nodos son procesos individuales que realizan tareas específicas, como controlar sensores o ejecutar algoritmos. Estos nodos intercambian mensajes, que son estructuras de datos que contienen información relevante, como lecturas de sensores o comandos de control. Los nodos se conectan a través de tópicos, canales de comunicación unidireccionales donde un nodo puede publicar mensajes y otros nodos pueden suscribirse para recibirlos. Además, ROS permite la comunicación mediante servicios, que son llamadas de procedimiento remoto entre nodos, permitiendo que un nodo proporcione una funcionalidad específica que otros nodos pueden solicitar.
 
 <p align="center">
-  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/ece6b092-e39b-4a13-87ac-374091edf285" width="350"> 
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/ece6b092-e39b-4a13-87ac-374091edf285" width="450"> 
 </p>
-
 <p align="center">
 Ilustración 1. Estructura básica ROS (Open Robotics. 2024)
 </p>
@@ -29,10 +28,11 @@ El Sistema Operativo Robótico (ROS) ha sido clave en el progreso de la investig
 ROS 2 ha sido desarrollado desde cero con una arquitectura más flexible y modular, lo que permite una mejor escalabilidad y adaptabilidad a diferentes entornos y requisitos específicos de aplicaciones robóticas. La implementación del estándar DDS (Data Distribution Service) mejora la comunicación entre los componentes del sistema, especialmente en entornos distribuidos y en tiempo real, aspecto crucial para aplicaciones robóticas avanzadas. En términos de seguridad, se han integrado características avanzadas, como el cifrado de comunicaciones y la autenticación de nodos, garantizando un intercambio seguro de información, vital para aplicaciones críticas.
 
 <p align="center">
-  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/78bbfcc8-d98b-46ad-9420-6e6082061438" width="350"> 
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/78bbfcc8-d98b-46ad-9420-6e6082061438" width=450"> 
 </p>
-
+<p align="center">
 Ilustración 2. Estructura robusta ROS 2 (Macenski, S. 2022)
+</p>
 
 En el sistema de archivos de ROS, la organización incluye:
 Nivel del sistema de archivos ROS: Estructura principal.
