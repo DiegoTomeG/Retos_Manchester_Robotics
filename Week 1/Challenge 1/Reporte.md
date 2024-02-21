@@ -38,7 +38,7 @@ Servicios (.srv): Interacciones de solicitud/respuesta entre procesos, definidas
 Repositorios: Conjuntos de paquetes mantenidos mediante sistemas de control de versiones (VCS) como Git o Subversion, facilitando la publicación mediante herramientas como Bloom.
 
 <p align="center">
-  <img src="[URL_de_la_image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/b2e63b37-bd9c-4b80-8ab5-900494994db8)n" width="500">
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/b2e63b37-bd9c-4b80-8ab5-900494994db8" width="500">
 </p>
 
 Ilustración 3. Niveles de archivos de sistema en ROS (Joseph, L. 2018)
