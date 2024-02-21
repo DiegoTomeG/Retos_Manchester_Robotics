@@ -55,7 +55,32 @@ En el sistema de archivos de ROS, la organización incluye:
 
 ## Solución del problema
 
-Presentar la metodología realizada para lograr los objetivos del reto, así como la descripción de los elementos, funciones y seguimiento del código de programación implementado.
+### Configuración inicial 
+Dadas las instrucciones proporcionadas, en primera instancia debe crearse un nuevo paquete llamado courseworks en donde se almacenarán los nodos correspondientes para procesar la señal senoidal. Por elección grupal y para evitar cualquier tipo de confusión en futuros proyectos, se ha creado una nueva carpeta fuente. 
+```
+$ mkdir challenge1
+$ cd challenge1
+$ mkdir src
+$ cd src
+```	
+Con la nueva carpeta fuente disponible, se crea dentro un nuevo paquete. Además de agregar el nombre del primer nodo (signal_generator) y del paquete (courseworks), también deben incluirse las dependencias, que son atributos necesarios para compilar el programa. Para este caso se utilizan las dependencias _rclpy_ y _std_msgs_
+
+```
+$ ros2 pkg create --build-type ament_python --node-name signal_generator courseworks --dependencies rclpy std_msgs 
+```
+Una vez que se ha creado el espacio de trabajo, es conveniente construir el archivo ejecutable para verificar que funciona la distribución de archivos. Para ello se utilizará el comando _colcon_, que construye a la par un directorio _build_, _install_ y _log_ para la carpeta src.
+```
+$ Colcon build  
+```
+Para agregar los elementos necesarios a las rutas de librerias y proporcionar comandos de shell o bash: 
+```
+$ source install/setup.bash  
+```
+Finalmente, para ejecutar el contenido dentro del nodo: 
+```
+$ sros2 courseworks signal_generator 
+```
+
 
 ### Implementación del launch file
 
