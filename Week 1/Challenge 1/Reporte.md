@@ -35,13 +35,15 @@ Ilustración 2. Estructura robusta ROS 2 (Macenski, S. 2022)
 </p>
 
 En el sistema de archivos de ROS, la organización incluye:
-Nivel del sistema de archivos ROS: Estructura principal.
-Metapaquetes: Grupos de paquetes relacionados, que pueden agruparse libremente.
-Paquetes: Unidades básicas del software ROS, conteniendo nodos, bibliotecas, y archivos de configuración.
-Manifiesto del paquete: Archivo que proporciona información sobre el paquete, como autor, licencia, y dependencias.
-Mensajes (.msg): Tipo de información enviada entre procesos ROS, definida en archivos .msg dentro de la carpeta msg de un paquete.
-Servicios (.srv): Interacciones de solicitud/respuesta entre procesos, definidas en archivos .srv dentro de la carpeta srv de un paquete.
-Repositorios: Conjuntos de paquetes mantenidos mediante sistemas de control de versiones (VCS) como Git o Subversion, facilitando la publicación mediante herramientas como Bloom.
+
+- **Nivel del sistema de archivos ROS**: Estructura principal
+- **Metapaquetes**: Grupos de paquetes relacionados, que pueden agruparse libremente.
+- **Paquetes**: Unidades básicas del software ROS, conteniendo nodos, bibliotecas, y archivos de configuración.
+- **Manifiesto del paquete**: Archivo que proporciona información sobre el paquete, como autor, licencia, y dependencias.
+- **Mensajes (.msg)**: Tipo de información enviada entre procesos ROS, definida en archivos `.msg` dentro de la carpeta `msg` de un paquete.
+- **Servicios (.srv)**: Interacciones de solicitud/respuesta entre procesos, definidas en archivos `.srv` dentro de la carpeta `srv` de un paquete.
+- **Repositorios**: Conjuntos de paquetes mantenidos mediante sistemas de control de versiones (VCS) como Git o Subversion, facilitando la publicación mediante herramientas como Bloom.
+
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/b2e63b37-bd9c-4b80-8ab5-900494994db8" width="350">
