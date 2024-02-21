@@ -101,11 +101,11 @@ Considerando esto, creamos el código de la siguiente manera, apoyandonos de la 
 
 Importamos las librerías correspondientes para el uso del launch file: 
 ``` python
-	from launch import LaunchDescription
+from launch import LaunchDescription
 from launch_ros.actions import Node
 ```
-Declaramos la función generate_launch_description, la cual contendrá todos los nodos que deseamos inicializar. 
-a
+Declaramos la función generate_launch_description, la cual contendrá todos los nodos que deseamos inicializar: 
+``` python
 def generate_launch_description():
    return LaunchDescription([
        Node(
@@ -131,21 +131,27 @@ def generate_launch_description():
            arguments= ['/signal/data', '/proc_signal/data']  
        )
    ])
+```
 
-	Tal y como se puede observar, dentro de esta función se agregan los nodos que se desean ejecutar, indicando el paquete y el ejecutable en donde se encuentran. 
+Tal y como se puede observar, dentro de esta función se agregan los nodos que se desean ejecutar, indicando el paquete y el ejecutable en donde se encuentran. 
 
-Observemos que tanto para el nodo signal_generator como para el nodo process agregamos otro atributo (prefix) con el valor gnome-terminal --. Este atributo, según Nadeem (2015), indicaría al sistema que dicho nodo se deberá ejecutar en una nueva terminal. 
+* Observemos que tanto para el nodo signal_generator como para el nodo process agregamos otro atributo (prefix) con el valor gnome-terminal --. Este atributo, según Nadeem (2015), indicaría al sistema que dicho nodo se deberá ejecutar en una nueva terminal. 
 
-De igual forma, utilizando la función generate_launch_description, podemos ejecutar rqt_graph y rqt_plot, lo que nos permitirá visualizar gráficamente las señales activas. Nótese, de igual manera, que utilizando el prefijo ‘gnome-terminal --’ indicamos que lo ejecute desde una nueva terminal. 
+* De igual forma, utilizando la función generate_launch_description, podemos ejecutar rqt_graph y rqt_plot, lo que nos permitirá visualizar gráficamente las señales activas. Nótese, de igual manera, que utilizando el prefijo ‘gnome-terminal --’ indicamos que lo ejecute desde una nueva terminal. 
 
-Finalmente, en el nodo encargado de ejecutar rqt_plot, agregamos el atributo arguments, que según Rodriguez (2015), nos permitirá indicar específicamente que señales deseamos graficar. 
+* Finalmente, en el nodo encargado de ejecutar rqt_plot, agregamos el atributo arguments, que según Rodriguez (2015), nos permitirá indicar específicamente que señales deseamos graficar. 
 
 
-Ahora bie, para verificar que nuestro launch file funcione correctamente, debemos ubicarnos en la carpeta Challenge y realizar la compilación de los paquetes: 
-
+Ahora bien, para verificar que nuestro launch file funcione correctamente, debemos ubicarnos en la carpeta Challenge y realizar la compilación de los paquetes: 
+```
 $ colcon build
-$ source install/setup.py
+$ source install/setup.bash
+```
+Finalmente, ha llegado la hora de probar el funcionamiento de nuestro launch file: 
+```
 $ ros2 launch courseworks plotter_launch.py
+```
+
 
 
 ## Resultados
