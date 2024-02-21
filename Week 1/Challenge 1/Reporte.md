@@ -69,12 +69,12 @@ $ mkdir launch
 $ cd launch
 ```				
 
-Una vez en la carpeta, crearemos nuestro archivo utilizando el comando touch y nos aseguramos de darle permisos de ejecución
+Una vez en la carpeta, crearemos nuestro archivo utilizando el comando touch y nos aseguramos de darle permisos de ejecución (Manchester Robotics, 2024): 
 ```
 $ touch plotter_launch.py
 $ chmod +x plotter_launch.py
 ```
-							(Manchester Robotics, 2024)
+							
 
 De igual forma, tenemos que agregar la siguiente línea al archivo package.xml: ```<exec_depend>ros2launch</exec_depend> ```
 
