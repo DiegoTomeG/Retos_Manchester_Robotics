@@ -28,5 +28,5 @@ La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara
 6. La señal resultante debe publicarse mediante el mensaje Float32 en un tema llamado “/proc_signal”
 
 
-![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/9e87a3f8-f105-49f5-a2e9-14ba565db814)
+<img width="180" <img width="180" alt="Captura de Pantalla 2022-11-25 a la(s) 17 33 22" src="https://user-images.githubusercontent.com/94876975/225738411-3e8de1bc-68c4-445a-82b2-16b2f75bf864.gif">>
 
