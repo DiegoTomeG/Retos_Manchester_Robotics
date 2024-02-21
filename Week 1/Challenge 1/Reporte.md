@@ -107,7 +107,7 @@ class My_Publisher(Node):
         self.get_logger().info('Signal generator node successfully initialized!!')
 
 ```
-Posteriormente, se define un segundo método timer_callback , el cual se encargará de publicar la señal. Utiliza un timer para obtener el tiempo real en segundos y crea un mensaje Float32 para signal y time en sus respectivos tópicos. 
+Posteriormente, se define un segundo método t_imer_callback_, el cual se encargará de publicar la señal. Utiliza un timer para obtener el tiempo real en segundos y crea un mensaje Float32 para signal y time en sus respectivos tópicos. Finalmente se imprime en la terminal el valor del _time_ y la función evaluada para cada instante de tiempo.
 
 ```python
    def timer_callback(self):
