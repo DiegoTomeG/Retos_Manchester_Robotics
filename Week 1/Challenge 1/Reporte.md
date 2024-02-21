@@ -57,6 +57,106 @@ Presentar la metodología realizada para lograr los objetivos del reto, así com
 
 ### Implementación del launch file
 
+Hasta el momento, hemos comprobado ya el correcto funcionamiento de nuestros programa, obteniendo los resultados deseados. Sin embargo, resulta importante mencionar que en algunas ocasiones puede llegar a ser bastante tedioso el abrir una considerable cantidad de terminales para ejecutar cada uno de los nodos dentro del paquete, por lo que para hacer mucho más sencilla la ejecución de todos los nodos involucrados haremos uso de un launch file. 
+
+Pero, ¿qué es un launch file? De acuerdo con The Robotics Back-End (2019), un launch file es un archivo que nos permite inicializar todos los nodos (o los necesarios para  el funcionamiento de nuestro programa) ejecutando únicamente un archivo. 
+Para implementar un launch file a nuestro programa, utilizamos la información brindada por Manchester Robotics, en conjunto con información encontrada en algunos foros, etc. 
+
+Crearemos una carpeta para el launch file dentro de nuestro paquete: 
+
+$ cd Challenge1/src/courseworks
+$ mkdir launch
+$ cd launch
+							(Manchester Robotics, 2024)
+
+Una vez en la carpeta, crearemos nuestro archivo utilizando el comando touch y nos aseguramos de darle permisos de ejecución
+
+$ touch plotter_launch.py
+$ chmod +x plotter_launch.py
+
+							(Manchester Robotics, 2024)
+
+De igual forma, tenemos que agregar la siguiente línea al archivo package.xml: <exec_depend>ros2launch</exec_depend> 
+
+(Manchester Robotics, 2024)
+
+Dentro del archivo setup.py, específicamente dentro de data_files, agregamos las siguientes líneas de código: 
+ (os.path.join('share', package_name, 'launch'),
+glob(os.path.join('launch', '*launch.[pxy][yma]*')))
+
+(Manchester Robotics, 2024)
+
+Por supuesto, es importante no olvidar importar las librerías correspondientes: 
+
+ 	 import os
+from glob import glob
+
+(Manchester Robotics, 2024)
+
+
+
+
+
+
+Agregamos código al archivo plotter_launch.py: 
+
+Para este caso, nuestro objetivo será crear un launch file que sea capaz de: 
+
+Ejecutar ambos nodos, signal_generator y process, en diferentes terminales, una para cada nodo. 
+Abrir una plotter utilizando rqt_plot, en donde se puedan observar ambas señales. 
+Como extra, el launch file deberá abrir una gráfica, utilizado rqt_graph, en donde se puedan visualizar todos los elementos activos, tanto nodos como tópicos.
+	
+	Considerando esto, creamos el código de la siguiente manera, apoyandonos de la documentación oficial para ROS2
+
+
+Importamos las librerías correspondientes para el uso del launch file: 
+		
+	from launch import LaunchDescription
+from launch_ros.actions import Node
+Declaramos la función generate_launch_description, la cual contendrá todos los nodos que deseamos inicializar. 
+a
+def generate_launch_description():
+   return LaunchDescription([
+       Node(
+           package='courseworks',
+           executable='signal_generator',
+           output = 'screen',
+           prefix='gnome-terminal --'
+       ),
+       Node(
+           package='courseworks',
+           executable='process',
+           output = 'screen',
+           prefix='gnome-terminal --'
+       ),
+       Node(
+           package = 'rqt_graph',
+           executable = 'rqt_graph',
+           prefix='gnome-terminal --'
+       ),
+       Node(
+           package = 'rqt_plot',
+           executable = 'rqt_plot',
+           arguments= ['/signal/data', '/proc_signal/data']  
+       )
+   ])
+
+	Tal y como se puede observar, dentro de esta función se agregan los nodos que se desean ejecutar, indicando el paquete y el ejecutable en donde se encuentran. 
+
+Observemos que tanto para el nodo signal_generator como para el nodo process agregamos otro atributo (prefix) con el valor gnome-terminal --. Este atributo, según Nadeem (2015), indicaría al sistema que dicho nodo se deberá ejecutar en una nueva terminal. 
+
+De igual forma, utilizando la función generate_launch_description, podemos ejecutar rqt_graph y rqt_plot, lo que nos permitirá visualizar gráficamente las señales activas. Nótese, de igual manera, que utilizando el prefijo ‘gnome-terminal --’ indicamos que lo ejecute desde una nueva terminal. 
+
+Finalmente, en el nodo encargado de ejecutar rqt_plot, agregamos el atributo arguments, que según Rodriguez (2015), nos permitirá indicar específicamente que señales deseamos graficar. 
+
+
+Ahora bie, para verificar que nuestro launch file funcione correctamente, debemos ubicarnos en la carpeta Challenge y realizar la compilación de los paquetes: 
+
+$ colcon build
+$ source install/setup.py
+$ ros2 launch courseworks plotter_launch.py
+
+
 ## Resultados
 
 En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
