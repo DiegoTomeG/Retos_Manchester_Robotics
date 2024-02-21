@@ -296,6 +296,16 @@ Vease los resultados en la siguiente sección.
 
 En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
 
+
+![Screenshot from 2024-02-21 15-33-21](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/786a0822-4487-44a9-8448-00e49df81dfb)
+
+
+
+
+
+
+
+
 ## Conclusiones
 
 Durante el desarrollo del desafío, logramos cumplir satisfactoriamente los objetivos propuestos. Nos familiarizamos de manera efectiva con el entorno de ROS2, lo que nos permitió utilizar las funciones de ROS2 desde la terminal con precisión. Además, logramos crear exitosamente los dos nodos, signal_generator y process, así como los tópicos /signal, /time y /proc_signal, los cuales funcionaron correctamente, como se demostró en la terminal. 
