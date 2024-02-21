@@ -171,5 +171,6 @@ Son los logros alcanzados en el proceso de investigación realizado. Incluir un 
 Incluir en la redacción de las conclusiones las posibles respuestas a estas cuestiones, con el fin de analizar la comprensión de los procesos involucrados para el cumplimiento de los objetivos.
 
 ## Bibliografía o referencias
-
-En este apartado se anexan los elementos consultadas para el desarrollo del tema de investigación.
+Manchester Robotics. (2024). Robot Operating System - ROS [Diapositivas de PowerPoint]. [https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf][https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf
+]
+The Robotics Back-End. (2019, February 4). What is a ROS launch file? The Robotics Back-End. [https://roboticsbackend.com/what-is-a-ros-launch-file/][https://roboticsbackend.com/what-is-a-ros-launch-file/]
