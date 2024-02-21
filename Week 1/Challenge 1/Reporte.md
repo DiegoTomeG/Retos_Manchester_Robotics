@@ -77,7 +77,7 @@ $ chmod +x plotter_launch.py
 							
 2. De igual forma, tenemos que agregar la siguiente línea al archivo package.xml: ```<exec_depend>ros2launch</exec_depend> ``` (Manchester Robotics, 2024).
 
-Dentro del archivo setup.py, específicamente dentro de data_files, agregamos las siguientes líneas de código (Manchester Robotics, 2024): 
+3. Dentro del archivo setup.py, específicamente dentro de data_files, agregamos las siguientes líneas de código (Manchester Robotics, 2024): 
 ``` python
  (os.path.join('share', package_name, 'launch'),
 glob(os.path.join('launch', '*launch.[pxy][yma]*')))
@@ -89,7 +89,7 @@ import os
 from glob import glob
 ```
 
-3. Procedemos a agregar código al archivo plotter_launch.py. Para este caso, nuestro objetivo será crear un launch file que sea capaz de: 
+4. Procedemos a agregar código al archivo plotter_launch.py. Para este caso, nuestro objetivo será crear un launch file que sea capaz de: 
 
 * Ejecutar ambos nodos, signal_generator y process, en diferentes terminales, una para cada nodo. 
 * Abrir una plotter utilizando rqt_plot, en donde se puedan observar ambas señales. 
