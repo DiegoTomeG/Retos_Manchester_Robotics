@@ -81,6 +81,16 @@ Finalmente, para ejecutar el contenido dentro del nodo:
 $ ros2 courseworks signal_generator 
 ```
 
+Ahora es posible modificar el archivo de python del primer nodo, el cual corresponde a lanzar la señal senoidal. Considerando la estructura abordad durante la sesión, el programa tomará las siguientes modificaciones. 
+
+Como buena pŕactica, deben incluirse las dependencias al inicio del programa. Para generar la señal, se utilizará también las librerias _numpy_ y _time_. 
+```
+import rclpy
+import numpy as np
+import time
+from rclpy.node import Node
+from std_msgs.msg import Float32
+```
 
 ### Implementación del launch file
 
