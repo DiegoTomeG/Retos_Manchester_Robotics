@@ -82,6 +82,7 @@ $ ros2 courseworks signal_generator
 ```
 
 ### Creación de Nodos
+#### Nodo signal_generator
 Ahora es posible modificar el archivo de python del primer nodo, el cual corresponde a publicar la señal senoidal. Considerando la estructura abordada durante la sesión, el programa tomará las siguientes modificaciones. Como buena pŕactica, deben incluirse las dependencias al inicio del programa y para generar la señal, se utilizará también las librería _math_
 ```python
 import rclpy
@@ -126,7 +127,12 @@ Posteriormente, se define un segundo método t_imer_callback_, el cual se encarg
 
 ```
 
+Posteriormente, para verificar el funcionamiento de la señal de entrada debe graficarse 
 
+
+#### Nodo Process
+
+Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. 
 
 
 
