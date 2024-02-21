@@ -152,8 +152,7 @@ Finalmente, ha llegado la hora de probar el funcionamiento de nuestro launch fil
 $ ros2 launch courseworks plotter_launch.py
 ```
 
-
-
+Vease los resultados en la siguiente sección. 
 ## Resultados
 
 En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
