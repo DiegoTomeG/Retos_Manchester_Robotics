@@ -159,15 +159,12 @@ En este apartado se insertan las evidencias del funcionamiento del reto, agregan
 
 ## Conclusiones
 
-Son los logros alcanzados en el proceso de investigación realizado. Incluir un análisis del cumplimiento de los objetivos,
+Durante el desarrollo del desafío, logramos cumplir satisfactoriamente los objetivos propuestos. Nos familiarizamos de manera efectiva con el entorno de ROS2, lo que nos permitió utilizar las funciones de ROS2 desde la terminal con precisión. Además, logramos crear exitosamente los dos nodos, signal_generator y process, así como los tópicos /signal, /time y /proc_signal, los cuales funcionaron correctamente, como se demostró en la terminal. 
 
--¿Se lograron los objetivos? ¿Por qué?, 
+El uso de herramientas como rqt_graph y rqt_plot nos permite visualizar el esquema esperado de manera precisa, mostrando las conexiones entre los nodos y los tópicos que facilitan la transmisión de información. Observamos con claridad la generación de la onda senoidal en el tópico /signal y la señal procesada en /proc_signal, evidenciando los ajustes realizados en el nodo process para procesar la señal senoidal. 
 
--¿No se cumplieron completamente los objetivos? ¿A qué se debe?, 
+En el transcurso del proyecto, enfrentamos algunos desafíos relacionados con la generación de señales erróneas, lo que resultó en conexiones incorrectas entre los nodos en nuestro diagrama. Sin embargo, tras ajustar ciertos requisitos y optimizar el proceso de compilación en ROS2, logramos resolver este problema de manera efectiva. Para mejorar la metodología implementada, sería recomendable establecer un proceso de prueba más riguroso para detectar y corregir posibles errores en la generación de señales. Esto podría incluir la implementación de pruebas automatizadas que validen la integridad de los datos transmitidos entre los nodos y los tópicos. 
 
--¿Cuál sería una posible solución o mejora a la metodología implementada?.
-
-Incluir en la redacción de las conclusiones las posibles respuestas a estas cuestiones, con el fin de analizar la comprensión de los procesos involucrados para el cumplimiento de los objetivos.
 
 ## Bibliografía o referencias
 Manchester Robotics. (2024). Robot Operating System - ROS [Diapositivas de PowerPoint]. [https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf][https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf]
