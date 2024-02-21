@@ -78,13 +78,13 @@ $ chmod +x plotter_launch.py
 2. De igual forma, tenemos que agregar la siguiente línea al archivo package.xml: ```<exec_depend>ros2launch</exec_depend> ``` (Manchester Robotics, 2024).
 
 Dentro del archivo setup.py, específicamente dentro de data_files, agregamos las siguientes líneas de código (Manchester Robotics, 2024): 
-```
+``` python
  (os.path.join('share', package_name, 'launch'),
 glob(os.path.join('launch', '*launch.[pxy][yma]*')))
 ```
 
 Por supuesto, es importante no olvidar importar las librerías correspondientes: 
-```
+``` python
 import os
 from glob import glob
 ```
