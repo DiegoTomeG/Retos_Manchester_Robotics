@@ -222,7 +222,7 @@ Tal y como se puede observar, dentro de esta función se agregan los nodos que s
 
 * Observemos que tanto para el nodo signal_generator como para el nodo process agregamos otro atributo (prefix) con el valor gnome-terminal --. Este atributo, según Nadeem (2015), indicaría al sistema que dicho nodo se deberá ejecutar en una nueva terminal. 
 
-* De igual forma, utilizando la función generate_launch_description, podemos ejecutar rqt_graph y rqt_plot, lo que nos permitirá visualizar gráficamente las señales activas. Nótese, de igual manera, que utilizando el prefijo ‘gnome-terminal --’ indicamos que lo ejecute desde una nueva terminal. 
+* De igual forma, utilizando la función generate_launch_description, podemos ejecutar rqt_graph y rqt_plot, lo que nos permitirá visualizar gráficamente las señales activas. Nótese, de igual manera, que utilizando el prefijo ‘gnome-terminal --’ para el nodo rqt_graph, indicamos que lo ejecute desde una nueva terminal. 
 
 * Finalmente, en el nodo encargado de ejecutar rqt_plot, agregamos el atributo arguments, que según Rodriguez (2015), nos permitirá indicar específicamente que señales deseamos graficar. 
 
