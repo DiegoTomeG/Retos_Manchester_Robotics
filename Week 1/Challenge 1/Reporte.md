@@ -16,14 +16,14 @@ Este trabajo aborda la comunicación básica en ROS 2, lo cual es fundamental pa
 
 La comunicación en ROS se basa en un modelo de intercambio de mensajes entre nodos. Los nodos son procesos individuales que realizan tareas específicas, como controlar sensores o ejecutar algoritmos. Estos nodos intercambian mensajes, que son estructuras de datos que contienen información relevante, como lecturas de sensores o comandos de control. Los nodos se conectan a través de tópicos, canales de comunicación unidireccionales donde un nodo puede publicar mensajes y otros nodos pueden suscribirse para recibirlos. Además, ROS permite la comunicación mediante servicios, que son llamadas de procedimiento remoto entre nodos, permitiendo que un nodo proporcione una funcionalidad específica que otros nodos pueden solicitar.
 
-
+![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/ece6b092-e39b-4a13-87ac-374091edf285)
 Ilustración 1. Estructura básica ROS (Open Robotics. 2024)
 
 El Sistema Operativo Robótico (ROS) ha sido clave en el progreso de la investigación robótica al ofrecer una plataforma modular y gratuita. A pesar de sus contribuciones, la primera versión, ROS 1, tenía limitaciones en características y adaptabilidad a entornos de producción. Con el lanzamiento de ROS 2, una versión completamente rediseñada, se han abordado estas deficiencias y se han introducido mejoras significativas para enfrentar los desafíos actuales en robótica.
 
 ROS 2 ha sido desarrollado desde cero con una arquitectura más flexible y modular, lo que permite una mejor escalabilidad y adaptabilidad a diferentes entornos y requisitos específicos de aplicaciones robóticas. La implementación del estándar DDS (Data Distribution Service) mejora la comunicación entre los componentes del sistema, especialmente en entornos distribuidos y en tiempo real, aspecto crucial para aplicaciones robóticas avanzadas. En términos de seguridad, se han integrado características avanzadas, como el cifrado de comunicaciones y la autenticación de nodos, garantizando un intercambio seguro de información, vital para aplicaciones críticas.
 
-
+![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/78bbfcc8-d98b-46ad-9420-6e6082061438)
 Ilustración 2. Estructura robusta ROS 2 (Macenski, S. 2022)
 
 En el sistema de archivos de ROS, la organización incluye:
@@ -35,6 +35,7 @@ Mensajes (.msg): Tipo de información enviada entre procesos ROS, definida en ar
 Servicios (.srv): Interacciones de solicitud/respuesta entre procesos, definidas en archivos .srv dentro de la carpeta srv de un paquete.
 Repositorios: Conjuntos de paquetes mantenidos mediante sistemas de control de versiones (VCS) como Git o Subversion, facilitando la publicación mediante herramientas como Bloom.
 
+![image](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/94876975/b2e63b37-bd9c-4b80-8ab5-900494994db8)
 Ilustración 3. Niveles de archivos de sistema en ROS (Joseph, L. 2018)
 
 ## Solución del problema
