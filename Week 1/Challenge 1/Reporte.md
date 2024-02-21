@@ -82,9 +82,7 @@ $ ros2 courseworks signal_generator
 ```
 
 ### Creación de Nodos
-Ahora es posible modificar el archivo de python del primer nodo, el cual corresponde a lanzar la señal senoidal. Considerando la estructura abordad durante la sesión, el programa tomará las siguientes modificaciones. 
-
-Como buena pŕactica, deben incluirse las dependencias al inicio del programa. Para generar la señal, se utilizará también las librería _math_
+Ahora es posible modificar el archivo de python del primer nodo, el cual corresponde a publicar la señal senoidal. Considerando la estructura abordada durante la sesión, el programa tomará las siguientes modificaciones. Como buena pŕactica, deben incluirse las dependencias al inicio del programa y para generar la señal, se utilizará también las librería _math_
 ```python
 import rclpy
 from rclpy.node import Node
@@ -109,9 +107,24 @@ class My_Publisher(Node):
         self.get_logger().info('Signal generator node successfully initialized!!')
 
 ```
+Posteriormente, se define un segundo método timer_callback , el cual se encargará de publicar la señal. Utiliza un timer para obtener el tiempo real en segundos y crea un mensaje Float32 para signal y time en sus respectivos tópicos. 
 
+```python
+   def timer_callback(self):
+        t = self.get_clock().now().nanoseconds / 1e9
 
+        time_msg = Float32()
+        signal_msg = Float32()
 
+        time_msg.data = t
+        signal_msg.data = math.sin(t)
+
+        self.time.publish(time_msg)
+        self.signal.publish(signal_msg)
+
+        self.get_logger().info(f"Time: {time_msg.data}, Signal: {signal_msg.data}")
+
+```
 
 
 
