@@ -297,7 +297,7 @@ Vease los resultados en la siguiente sección.
 En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
 
 
-![Screenshot from 2024-02-21 15-33-21](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/786a0822-4487-44a9-8448-00e49df81dfb)
+![Screenshot from 2024-02-21 17-14-22](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/ba4b9614-2240-4b03-b0a4-18dc0c82a7f4)
 
 
 
