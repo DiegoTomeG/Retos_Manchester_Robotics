@@ -62,12 +62,12 @@ Hasta el momento, hemos comprobado ya el correcto funcionamiento de nuestros pro
 Pero, ¿qué es un launch file? De acuerdo con The Robotics Back-End (2019), un launch file es un archivo que nos permite inicializar todos los nodos (o los necesarios para  el funcionamiento de nuestro programa) ejecutando únicamente un archivo. 
 Para implementar un launch file a nuestro programa, utilizamos la información brindada por Manchester Robotics, en conjunto con información encontrada en algunos foros, etc. 
 
-Crearemos una carpeta para el launch file dentro de nuestro paquete: 
-
+Crearemos una carpeta para el launch file dentro de nuestro paquete (Manchester Robotics, 2024): 
+'''
 $ cd Challenge1/src/courseworks
 $ mkdir launch
 $ cd launch
-							(Manchester Robotics, 2024)
+'''						
 
 Una vez en la carpeta, crearemos nuestro archivo utilizando el comando touch y nos aseguramos de darle permisos de ejecución
 
