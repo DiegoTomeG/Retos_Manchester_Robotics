@@ -177,7 +177,7 @@ setup(
 4. Procedemos a agregar código al archivo plotter_launch.py. Para este caso, nuestro objetivo será crear un launch file que sea capaz de: 
 
 * Ejecutar ambos nodos, signal_generator y process, en diferentes terminales, una para cada nodo. 
-* Abrir una plotter utilizando rqt_plot, en donde se puedan observar ambas señales. 
+* Abrir un plotter utilizando rqt_plot, en donde se puedan observar ambas señales. 
 * Como extra, el launch file deberá abrir una gráfica, utilizado rqt_graph, en donde se puedan visualizar todos los elementos activos, tanto nodos como tópicos.
 
 Considerando esto, creamos el código de la siguiente manera, apoyandonos de la documentación oficial para [ROS2](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html)
