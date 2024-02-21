@@ -16,6 +16,8 @@ Es el espacio donde se presenta el tema de la investigación, así como cuestion
 
 Presentar la metodología realizada para lograr los objetivos del reto, así como la descripción de los elementos, funciones y seguimiento del código de programación implementado.
 
+### Implementación del launch file
+
 ## Resultados
 
 En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
