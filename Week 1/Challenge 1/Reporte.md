@@ -338,8 +338,7 @@ $ ros2 launch courseworks plotter_launch.py
 Vease los resultados en la siguiente sección. 
 ## Resultados
 
-En este apartado se insertan las evidencias del funcionamiento del reto, agregando descripciones de lo que representa cada una de estas, así como un análisis de tales resultados, para saber si se consideran resultados satisfactorios o completos, basado en los objetivos de la actividad.
-
+Como podemos observar a continuación primeramente vamos a ver nuestro diagrama, el cual correctamente se puede observar que los ovalos son los que se representan como nuestros nodos "signal_generator" y "process" además de que signal_generator tiene unas flechas apuntando a unos recuadros /time y /signal los cuales son los topicos en el que se estará publicando la hora t y por otro lado estará publicando valores de la señal senoidal utilizando un mensaje Float32 estandar de ROS. Justo el nodo de "process" subscribe estos dos topicos, procesando la señal recibida y modicandola haciendo que publique la señal modificada en el tópico /proc_signal
 
 ![Screenshot from 2024-02-21 17-14-22](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/ba4b9614-2240-4b03-b0a4-18dc0c82a7f4)
 
