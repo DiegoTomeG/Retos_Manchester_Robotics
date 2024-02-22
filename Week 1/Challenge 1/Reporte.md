@@ -6,7 +6,8 @@ En este reporte se incluye el proceso para familiarizarse el funcionamiento de R
 
 ## Objetivos
 
-Experimentar y familiarizarse con el ambiente de ROS2 para crear un entorno de comunicación, aplicando por primera ocasión conceptos como nodos y tópicos. 
+ - Familiarizarse con el ambiente de ROS2 para crear un entorno de comunicación, aplicando por primera ocasión conceptos como nodos y tópicos. 
+ - Identificar comandos básicos para llevar a cabo la construccin y manejo de paquetes dentro del sistema de ROS2. 
 
 ## Introducción
 
