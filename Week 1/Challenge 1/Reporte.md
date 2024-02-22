@@ -2,7 +2,7 @@
 
 ## Resumen
 
-En este reporte se incluye el proceso para familiarizarse el funcionamiento de ROS2 (Robot Operative System). Se incluye un ejemplo que aborda el uso de nodos y tópicos para simular un ambiente de comunicación entre dispositivos. Concretamente, se han creado nodos; el primero se encarga de publicar una señal senoidal a través de un tópico, posteriormente, el siguiente escuchará dicha señal y la utilizará como entrada para modificarla y para producir una nueva. La señal producida también será publicada. Finalmente, ambas señales sarán graficadas simultaneamente para evidenciar los cambios de procesamiento. 
+En este reporte se incluye el proceso para familiarizarse con el funcionamiento de ROS2 (Robot Operative System). Se incluye un ejemplo que aborda el uso de nodos y tópicos para simular un ambiente de comunicación entre dispositivos. Concretamente, se han creado nodos; el primero se encarga de publicar una señal senoidal a través de un tópico, posteriormente, el siguiente escuchará dicha señal y la utilizará como entrada para modificarla y para producir una nueva. La señal producida también será publicada. Finalmente, ambas señales sarán graficadas simultaneamente para evidenciar los cambios de procesamiento. 
 
 ## Objetivos
 
