@@ -132,9 +132,27 @@ Posteriormente, para verificar el funcionamiento de la señal de entrada debe gr
 
 #### Nodo Process
 
-Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. 
+#### Nodo Process
 
+Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. Siguiendo la misma metodología, se crea un nuevo nodo como archivo de python: process.py. Una vez creado el nodo, este deberá modificarse para actuar como listener y talker simultaneamente para volver a publicar la señal ya alterada. 
 
+Nuevamente se incluyen las librerias con dependencias junto con el tipo de dato FLoat32.
+
+```python
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32 
+```
+
+```python
+class My_Subscriber(Node):
+    def __init__(self): 
+        super().__init__('process')
+        self.publisher = self.create_publisher(Float32, 'proc_signal', 10)
+        self.sub_signal = self.create_subscription(Float32, 'signal', self.signal_callback, 10)
+        self.sub_time = self.create_subscription(Float32, 'time', self.time_signal_callback, 10)
+
+```  
 
 ### Implementación del launch file
 
