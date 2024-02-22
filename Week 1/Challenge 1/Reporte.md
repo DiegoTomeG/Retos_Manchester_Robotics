@@ -350,15 +350,19 @@ Por consiguiente gracias al comando de ros2 run rqt_plot rqt_plot podemos visual
 
 ![WhatsApp Image 2024-02-21 at 20 38 38](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/0beb1519-3d75-4b44-8386-24f71a904641)
 
+### Comprobación
 
+Si desea comprobar los resultados obtenidos puede descargar el archivo challenge_1.zip para poder verificarlo. Tendra que ejecutar primeramente el comando de colcon build, posteriormente source install/setup.bash y finalmente ros2 launch courseworks plotter_launch.py lo que le abrirá todas las ventanas que anteriormente ya hemos explicado en los resultados.
+
+Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacia pero puede agregar manualmente los topic
 
 
 
 ## Conclusiones
 
-Durante el desarrollo del desafío, logramos cumplir satisfactoriamente los objetivos propuestos. Nos familiarizamos de manera efectiva con el entorno de ROS2, lo que nos permitió utilizar las funciones de ROS2 desde la terminal con precisión. Además, logramos crear exitosamente los dos nodos, signal_generator y process, así como los tópicos /signal, /time y /proc_signal, los cuales funcionaron correctamente, como se demostró en la terminal. 
+Durante el desarrollo del desafío, logramos cumplir satisfactoriamente los objetivos propuestos, nos familiarizamos de manera efectiva con el entorno de ROS2, lo que nos permitió utilizar las funciones de ROS2 desde la terminal con precisión. Además, logramos crear exitosamente los dos nodos, signal_generator y process, así como los tópicos /signal, /time y /proc_signal, los cuales funcionaron correctamente, como se demostró en la terminal. 
 
-El uso de herramientas como rqt_graph y rqt_plot nos permite visualizar el esquema esperado de manera precisa, mostrando las conexiones entre los nodos y los tópicos que facilitan la transmisión de información. Observamos con claridad la generación de la onda senoidal en el tópico /signal y la señal procesada en /proc_signal, evidenciando los ajustes realizados en el nodo process para procesar la señal senoidal. 
+El uso de herramientas como rqt_graph y rqt_plot nos permite visualizar el esquema esperado de manera precisa, mostrando las conexiones entre los nodos y los tópicos que facilitan la transmisión de información. De igual forma observamos con claridad la generación de la onda senoidal en el tópico /signal y la señal procesada en /proc_signal, evidenciando los ajustes realizados en el nodo process para procesar la señal senoidal. 
 
 En el transcurso del proyecto, enfrentamos algunos desafíos relacionados con la generación de señales erróneas, lo que resultó en conexiones incorrectas entre los nodos en nuestro diagrama. Sin embargo, tras ajustar ciertos requisitos y optimizar el proceso de compilación en ROS2, logramos resolver este problema de manera efectiva. Para mejorar la metodología implementada, sería recomendable establecer un proceso de prueba para detectar y corregir posibles errores en la generación de señales, esto podría incluir la implementación de pruebas automatizadas que validen la integridad de los datos transmitidos entre los nodos y los tópicos. Al crear este proceso nos permitiría mejorar la integridad y la confiabilidad de nuestro sistema, asegurando un rendimiento óptimo en entornos futuros. Además, la experiencia adquirida nos enseñó la importancia de la optimización del proceso de compilación en ROS2 con ayuda de generar un archivo launch para una mejor ejecución de la solución
 
