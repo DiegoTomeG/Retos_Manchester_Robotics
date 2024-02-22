@@ -98,15 +98,13 @@ Una vez construida la _Clase My_Publisher_ y, a diferencia del ejemplo de la cla
 class My_Publisher(Node):
     def __init__(self):
         super().__init__('signal_generator')
-        #Part 1
         self.signal = self.create_publisher(Float32, 'signal', 10)
-        #Part 2
         self.time = self.create_publisher(Float32, 'time', 10)
-        #Part 3
         timer_period = 0.1  # 10 Hz
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        #Part 4
         self.get_logger().info('Signal generator node successfully initialized!!')
+	self.time_msg = Float32()
+        self.signal_msg = Float32()
 
 ```
 Posteriormente, se define un segundo método t_imer_callback_, el cual se encargará de publicar la señal. Utiliza un timer para obtener el tiempo real en segundos y crea un mensaje Float32 para signal y time en sus respectivos tópicos. Finalmente se imprime en la terminal el valor del _time_ y la función evaluada para cada instante de tiempo.
@@ -114,17 +112,13 @@ Posteriormente, se define un segundo método t_imer_callback_, el cual se encarg
 ```python
    def timer_callback(self):
         t = self.get_clock().now().nanoseconds / 1e9
+        self.time_msg.data = t
+        self.signal_msg.data = math.sin(t)
 
-        time_msg = Float32()
-        signal_msg = Float32()
+        self.time.publish(self.time_msg)
+        self.signal.publish(self.signal_msg)
 
-        time_msg.data = t
-        signal_msg.data = math.sin(t)
-
-        self.time.publish(time_msg)
-        self.signal.publish(signal_msg)
-
-        self.get_logger().info(f"Time: {time_msg.data}, Signal: {signal_msg.data}")
+        self.get_logger().info(f"Time: {self.time_msg.data}, Signal: {self.signal_msg.data}")
 
 ```
 
