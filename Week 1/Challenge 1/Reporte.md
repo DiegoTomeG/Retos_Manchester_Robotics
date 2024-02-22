@@ -130,18 +130,16 @@ $ ros2 run rqt_plot rqt_plot
 Nota: Para ejecutar el comando anterior con fines de debugg, sera necesario ejectuar previamente el nodo: ```ros2 run courseworks signal_generator```
 #### Nodo Process
 
-Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. Siguiendo la misma metodología, se crea un nuevo nodo como archivo de python: process.py. Una vez creado el nodo, este deberá modificarse para actuar como listener y talker simultaneamente para volver a publicar la señal ya alterada. 
+Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. Siguiendo la misma metodología, se crea un nuevo nodo como archivo de python: process.py. Una vez creado el nodo, este deberá modificarse para actuar como listener y talker simultáneamente para volver a publicar la señal ya alterada.
 
-Nuevamente se incluyen las librerias con dependencias junto con el tipo de dato FLoat32.
+Nuevamente, se incluyen las librerías con dependencias junto con el tipo de dato FLoat32.
 
 ```python
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32 
 ```
-
-La estructura de la clase se mantiene igual, sin embargo deben realizarse las modificaciones pertinentes para que el nuevo nodo actúe como susbcriber en lugar de publisher. Por ejemplo, el nombre de la clase, los métodos y objetos. En cuanto a los tópicos, debe crearse uno como publicador (señal procesada) y dos suscriptores que se encargarán de leer la señal de entrada. 
-
+La estructura de la clase se mantiene igual; sin embargo, deben realizarse las modificaciones pertinentes para que el nuevo nodo actúe como susbcriber en lugar de publisher. Por ejemplo, el nombre de la clase, los métodos y objetos. En cuanto a los tópicos, debe crearse uno como publicador (señal procesada) y dos suscriptores que se encargarán de leer la señal de entrada.
 ```python
 class My_Subscriber(Node):
     def __init__(self):
