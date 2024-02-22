@@ -144,34 +144,23 @@ La estructura de la clase se mantiene igual, sin embargo deben realizarse las mo
 
 ```python
 class My_Subscriber(Node):
-    def __init__(self): 
+    def __init__(self):
         super().__init__('process')
-        self.publisher = self.create_publisher(Float32, 'proc_signal', 10)
-        self.sub_signal = self.create_subscription(Float32, 'signal', self.signal_callback, 10)
-        self.sub_time = self.create_subscription(Float32, 'time', self.time_signal_callback, 10)
+        self.subTime = self.create_subscription(Float32, '/time', self.time_callback, 10)
+        self.subSignal = self.create_subscription(Float32, '/signal', self.signal_callback, 10)
+        self.pub_proc_signal = self.create_publisher(Float32, 'proc_signal', 10)
+        self.get_logger().info('Process subscribed to /time and /signal topics!!!')
+        self.modified_signal_msg = Float32()
 
 ```
 Lo siguiente es crear el segundo método para publicar la señal procesada. La función se ejecuta cada vez que un mensaje es recibido a través del tópico de _signal_. Se encarga de procesar la información de la señal ('msg.data'), la modifica y después la publica en el tópico de _proc_signal_. 
 
 ```python
-
-    def signal_callback(self, msg): 
-        self.proc_signal.data = (msg.data + 2.0)*0.5
-        self.publisher.publish(self.proc_signal)
-        self.get_logger().info(f'New Signal: {self.proc_signal}')
-
-    def time_signal_callback(self, msg): 
-        pass
-
-    def main(args=None): 
-        rclpy.init(args=args)
-        m_s = My_Subscriber()
-        rclpy.spin(m_s)
-        m_s.destroy_node()
-        rclpy.shutdown()
-
-if __name__ == '__main__': 
-    main()
+    def signal_callback(self, signal_msg):
+        self.get_logger().info(f"Received Signal: {signal_msg.data}")
+        self.modified_signal_msg.data = signal_msg.data * 2  
+        self.pub_proc_signal.publish(self.modified_signal_msg)
+    
 ```
 
 Para compilar este segundo nodo, se debe abrir otra terminal y ejecutar los comandos previos para llevar a cabo el proceso de construcción. Una vez construido y para verificar el funcionamiento adecuado, se debe volver a graficar la función. 
