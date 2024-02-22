@@ -59,8 +59,8 @@ En el sistema de archivos de ROS, la organización incluye:
 ### Configuración inicial 
 Dadas las instrucciones proporcionadas, en primera instancia debe crearse un nuevo paquete llamado courseworks en donde se almacenarán los nodos correspondientes para procesar la señal senoidal. Por elección grupal y para evitar cualquier tipo de confusión en futuros proyectos, se ha creado una nueva carpeta fuente. 
 ```
-$ mkdir challenge1
-$ cd challenge1
+$ mkdir challenge_1
+$ cd challenge_1
 $ mkdir src
 $ cd src
 ```	
@@ -71,7 +71,7 @@ $ ros2 pkg create --build-type ament_python --node-name signal_generator coursew
 ```
 Una vez que se ha creado el espacio de trabajo, es conveniente construir el archivo ejecutable para verificar que funciona la distribución de archivos. Para ello se utilizará el comando _colcon_, que construye a la par un directorio _build_, _install_ y _log_ para la carpeta src.
 ```
-$ Colcon build  
+$ colcon build  
 ```
 Para agregar los elementos necesarios a las rutas de librerias y proporcionar comandos de shell o bash: 
 ```
@@ -79,7 +79,7 @@ $ source install/setup.bash
 ```
 Finalmente, para ejecutar el contenido dentro del nodo: 
 ```
-$ ros2 courseworks signal_generator 
+$ ros2 run courseworks signal_generator 
 ```
 
 ### Creación de Nodos
