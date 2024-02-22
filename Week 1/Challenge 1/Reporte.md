@@ -341,7 +341,14 @@ Como podemos observar a continuación primeramente vamos a ver nuestro diagrama,
 ![WhatsApp Image 2024-02-21 at 20 38 39(1)](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0)
 
 
+Lo siguiente que observamos son nuestras dos terminales ejecutandosé el nodo "signal_generator" donde del lado izquierdo observamos como se van mostrando los datos del tiempo y tambien el dato de la señal senoidal que se estan mandando. Del lado derecho tenemos ejecutandose el nodo "process" donde se observan los datos del tiempo que se recibe y también de la señal que ya es procesada pero es recibida y se esta publicando.
 
+![WhatsApp Image 2024-02-21 at 20 38 39](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/6117d0de-de59-4794-8729-86efb8797001)
+
+
+Por consiguiente gracias al comando de ros2 run rqt_plot rqt_plot podemos visualizar la siguiente gráfica, la linea azul es la señal que se esta mandando por el topic /signal del nodo "signal_generator" y graficandose correctamente como una onda senoidal. Por otro lado tenemos la linea roja que es la señal ya procesada por el topic /proc_signal del nodo "process" mandando la señal pero modificando los parámetros de la original.
+
+![WhatsApp Image 2024-02-21 at 20 38 38](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/0beb1519-3d75-4b44-8386-24f71a904641)
 
 
 
