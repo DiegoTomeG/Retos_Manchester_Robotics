@@ -336,7 +336,7 @@ $ ros2 launch courseworks plotter_launch.py
 Véase los resultados en la siguiente sección. 
 ## Resultados
 
-Como podemos observar a continuación en nuestro diagrama, se pueden identificar correctamente a los óvalos que representan a nuestros nodos "signal_generator" y "process". De igual forma, se observa que el nodo signal_generator tiene unas flechas apuntando a los recuadros /time y /signal los cuales son los topic en el que se estará publicando el timpoe _t_ y, por otro lado, estará publicando valores de la señal senoidal utilizando un mensaje Float32 estándar de ROS. Por último, nuestro diagrama muestra como el nodo de "process"  se subscribe a los topics previamente mencnionados, para posteriormente modificar la señal y publicandola en el topic /proc_signal
+Como podemos observar a continuación en nuestro diagrama, se pueden identificar correctamente a los óvalos que representan a nuestros nodos "signal_generator" y "process". De igual forma, se observa que el nodo signal_generator tiene unas flechas apuntando a los recuadros /time y /signal los cuales son los tópicos en el que se estará publicando el timpoe t y, por otro lado, estará publicando valores de la señal senoidal utilizando un mensaje Float32 estándar de ROS. Por último, nuestro diagrama muestra como el nodo de "process" se subscribe a los tópicos previamente mencionados, para posteriormente modificar la señal y publicandola en el topic /proc_signal
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0" width=600"> 
@@ -361,7 +361,7 @@ Finalmente , gracias al comando de ```ros2 run rqt_plot rqt_plot``` podemos visu
 
 Para comprobar los resultados obtenidos, puede descargar el archivo challenge_1.zip y verificarlo. Dentro de la carpeta challenge_1, tendrá que ejecutar el comando de ```colcon build```, posteriormente ```source install/setup.bash``` y finalmente ```ros2 launch courseworks plotter_launch.py```, lo que le abrirá todas las ventanas que anteriormente ya hemos explicado en los resultados.
 
-Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacía, pero puede agregar manualmente los topicos en esta parte de la venta. Para ello, pondremos el nombre de signal/data para poder mostrar la onda senoidal original, agregandola con el botón + ubicado en la parte superior. Haremos lo mismo para proc_signal/data, lo que mostrará la onda senoidal modificada: 
+Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacía, pero puede agregar manualmente los tópicos en esta parte de la venta. Para ello, pondremos el nombre de signal/data para poder mostrar la onda senoidal original, agregándola con el botón + ubicado en la parte superior. Haremos lo mismo para proc_signal/data, lo que mostrará la onda senoidal modificada: 
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/d0da2708-1813-413b-91ec-ce216cfc2fb8" width=700"> 
