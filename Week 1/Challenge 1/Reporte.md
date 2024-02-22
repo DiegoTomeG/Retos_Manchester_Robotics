@@ -144,7 +144,7 @@ from rclpy.node import Node
 from std_msgs.msg import Float32 
 ```
 
-La estructura de la clase se mantiene igual, sin embargo deben realizarse las modificaciones pertinentes para que el nuevo nodo actúe como susbcriber en lugar de publisher. Por ejemplo, el nombre de la clase, los métodos y objetos. En cuanto a los tópicos, debe crearse uno publicaador (señal procesada) y dos suscriptores que se encargarán de leer la señal de entrada. 
+La estructura de la clase se mantiene igual, sin embargo deben realizarse las modificaciones pertinentes para que el nuevo nodo actúe como susbcriber en lugar de publisher. Por ejemplo, el nombre de la clase, los métodos y objetos. En cuanto a los tópicos, debe crearse uno como publicador (señal procesada) y dos suscriptores que se encargarán de leer la señal de entrada. 
 
 ```python
 class My_Subscriber(Node):
@@ -155,10 +155,28 @@ class My_Subscriber(Node):
         self.sub_time = self.create_subscription(Float32, 'time', self.time_signal_callback, 10)
 
 ```
+Lo siguiente es crear el segundo método para publicar la señal procesada. La función se ejecuta cada vez que un mensaje es recibido a través del tópico de _signal_. Se encarga de procesar la información de la señal ('msg.data'), la modifica y después la publica en el tópico de _proc_signal_. 
 
+```python
 
+    def signal_callback(self, msg): 
+        self.proc_signal.data = (msg.data + 2.0)*0.5
+        self.publisher.publish(self.proc_signal)
+        self.get_logger().info(f'New Signal: {self.proc_signal}')
 
+    def time_signal_callback(self, msg): 
+        pass
 
+    def main(args=None): 
+        rclpy.init(args=args)
+        m_s = My_Subscriber()
+        rclpy.spin(m_s)
+        m_s.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__': 
+    main()
+```
 
 
 
