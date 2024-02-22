@@ -127,7 +127,7 @@ Una forma simple realizar un debugg para el proceso hasta este punto es el de gr
 ```
 $ ros2 run rqt_plot rqt_plot
 ```
-
+Nota: Para ejecutar el comando anterior con fines de debugg, sera necesario ejectuar previamente el nodo: ```ros2 run courseworks signal_generator```
 #### Nodo Process
 
 Como bien lo indica su nombre, este segundo nodo se encargará de procesar la señal obtenida al subscribirse al nodo anterior. Siguiendo la misma metodología, se crea un nuevo nodo como archivo de python: process.py. Una vez creado el nodo, este deberá modificarse para actuar como listener y talker simultaneamente para volver a publicar la señal ya alterada. 
