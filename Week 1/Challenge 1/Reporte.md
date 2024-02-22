@@ -339,19 +339,25 @@ Véase los resultados en la siguiente sección.
 Como podemos observar a continuación primeramente vamos a ver nuestro diagrama, el cual correctamente se puede observar que los ovalos son los que se representan como nuestros nodos "signal_generator" y "process" además de que signal_generator tiene unas flechas apuntando a unos recuadros /time y /signal los cuales son los topicos en el que se estará publicando la hora t y por otro lado estará publicando valores de la señal senoidal utilizando un mensaje Float32 estandar de ROS. Justo el nodo de "process" subscribe estos dos topicos, procesando la señal recibida y modicandola haciendo que publique la señal modificada en el tópico /proc_signal
 
 <p align="center">
-  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0" width=150"> 
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0" width=400"> 
 </p>
 <p align="center">
 
 
 Lo siguiente que observamos son nuestras dos terminales ejecutandosé el nodo "signal_generator" donde del lado izquierdo observamos como se van mostrando los datos del tiempo y tambien el dato de la señal senoidal que se estan mandando. Del lado derecho tenemos ejecutandose el nodo "process" donde se observan los datos del tiempo que se recibe y también de la señal que ya es procesada pero es recibida y se esta publicando.
 
-![WhatsApp Image 2024-02-21 at 20 38 39](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/6117d0de-de59-4794-8729-86efb8797001)
+<p align="center">
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/6117d0de-de59-4794-8729-86efb8797001" width=400"> 
+</p>
+<p align="center">
 
 
 Por consiguiente gracias al comando de ros2 run rqt_plot rqt_plot podemos visualizar la siguiente gráfica, la linea azul es la señal que se esta mandando por el topic /signal del nodo "signal_generator" y graficandose correctamente como una onda senoidal. Por otro lado tenemos la linea roja que es la señal ya procesada por el topic /proc_signal del nodo "process" mandando la señal pero modificando los parámetros de la original.
 
-![WhatsApp Image 2024-02-21 at 20 38 38](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/0beb1519-3d75-4b44-8386-24f71a904641)
+<p align="center">
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/0beb1519-3d75-4b44-8386-24f71a904641" width=400"> 
+</p>
+<p align="center">
 
 ### Comprobación
 
@@ -359,7 +365,12 @@ Si desea comprobar los resultados obtenidos puede descargar el archivo challenge
 
 Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacia pero puede agregar manualmente los topic en esta parte de la venta, donde pondremos el nombre de signal/data para poder mostrarla onda senoidal original y darles al botón de + también haremos lo mismo para proc_signal/data qeu mostrará la onda senoidal modificada y agregarla con el botón de +.
 
-![Screenshot from 2024-02-22 02-29-22](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/d0da2708-1813-413b-91ec-ce216cfc2fb8)
+
+
+<p align="center">
+  <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/d0da2708-1813-413b-91ec-ce216cfc2fb8" width=400"> 
+</p>
+<p align="center">
 
 
 
