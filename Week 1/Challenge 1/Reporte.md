@@ -180,7 +180,7 @@ $ ros2 run rqt_plot rqt_plot
 
 ### Implementación del launch file
 
-Hasta el momento, hemos comprobado ya el correcto funcionamiento de nuestros programa, obteniendo los resultados deseados. Sin embargo, resulta importante mencionar que en algunas ocasiones puede llegar a ser bastante tedioso el abrir una considerable cantidad de terminales para ejecutar cada uno de los nodos dentro del paquete, por lo que para hacer mucho más sencilla la ejecución de todos los nodos involucrados haremos uso de un launch file. 
+Hasta el momento, hemos comprobado ya el correcto funcionamiento de nuestro programa, obteniendo los resultados deseados. Sin embargo, resulta importante mencionar que en algunas ocasiones puede llegar a ser bastante tedioso el abrir una considerable cantidad de terminales para ejecutar cada uno de los nodos dentro del paquete, por lo que para hacer mucho más sencilla la ejecución de todos los nodos involucrados haremos uso de un launch file. 
 
 Pero, ¿qué es un launch file? De acuerdo con The Robotics Back-End (2019), un launch file es un archivo que nos permite inicializar todos los nodos (o los necesarios para  el funcionamiento de nuestro programa) ejecutando únicamente un archivo. 
 Para implementar un launch file a nuestro programa, utilizamos la información brindada por Manchester Robotics, en conjunto con información encontrada en algunos foros, etc. 
@@ -276,7 +276,7 @@ setup(
 * Abrir un plotter utilizando rqt_plot, en donde se puedan observar ambas señales. 
 * Como extra, el launch file deberá abrir una gráfica, utilizado rqt_graph, en donde se puedan visualizar todos los elementos activos, tanto nodos como tópicos.
 
-Considerando esto, creamos el código de la siguiente manera, apoyandonos de la documentación oficial para [ROS2](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html)
+Considerando esto, creamos el código de la siguiente manera, apoyándonos de la documentación oficial para [ROS2](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html)
 
 
 
@@ -333,7 +333,7 @@ Finalmente, ha llegado la hora de probar el funcionamiento de nuestro launch fil
 $ ros2 launch courseworks plotter_launch.py
 ```
 
-Vease los resultados en la siguiente sección. 
+Véase los resultados en la siguiente sección. 
 ## Resultados
 
 Como podemos observar a continuación primeramente vamos a ver nuestro diagrama, el cual correctamente se puede observar que los ovalos son los que se representan como nuestros nodos "signal_generator" y "process" además de que signal_generator tiene unas flechas apuntando a unos recuadros /time y /signal los cuales son los topicos en el que se estará publicando la hora t y por otro lado estará publicando valores de la señal senoidal utilizando un mensaje Float32 estandar de ROS. Justo el nodo de "process" subscribe estos dos topicos, procesando la señal recibida y modicandola haciendo que publique la señal modificada en el tópico /proc_signal
