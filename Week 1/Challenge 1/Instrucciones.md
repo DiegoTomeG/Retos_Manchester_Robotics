@@ -18,14 +18,10 @@ La actividad consiste en generar dos nodos, de los cuales el primer nodo actuara
 
 * **Nodo process:**
 1. Diseñe un segundo nodo llamado “proceso” que se suscriba a “/señal” y Temas “/tiempo”.
-2. Procese la señal recibida de la siguiente manera
-   - Compensa la señal recibida (g 𝑡 = f(t) + 𝛼) de modo que quede positivo para siempre 𝑡 ≥ 0 
-   - Reducir la amplitud de la señal recibida a la mitad.
-   - Agregar un cambio de fase a la señal recibida (como parámetro de usuario o variable) a la señal original.
-   - Para este ejercicio, este parámetro se puede codificar.
-4. Utilice una frecuencia de 10 Hz (puede elegir diferentes frecuencias) para este nodo.
-5. El resultado debe imprimirse en el terminal.
-6. La señal resultante debe publicarse mediante el mensaje Float32 en un tema llamado “/proc_signal”
+2. Procese la señal recibida de alguna manera, ya sea aumentando o disminuyendo la amplitud, agregando un cambio de fase, etc. 
+3. Utilice una frecuencia de 10 Hz (puede elegir diferentes frecuencias) para este nodo.
+4. El resultado debe imprimirse en el terminal.
+5. La señal resultante debe publicarse mediante el mensaje Float32 en un tema llamado “/proc_signal”
 
 <p align="center"><img width="500" alt="capca" src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/13d2caab-b196-4356-b1ba-a7debc3076d3">
 
