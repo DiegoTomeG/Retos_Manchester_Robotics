@@ -360,21 +360,30 @@ En el transcurso del proyecto, enfrentamos algunos desafíos relacionados con la
 
 
 ## Bibliografía o referencias
-Manchester Robotics. (2024). Robot Operating System - ROS [Diapositivas de PowerPoint]. [https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf][https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf]
-
-The Robotics Back-End. (2019, February 4). What is a ROS launch file? The Robotics Back-End. [https://roboticsbackend.com/what-is-a-ros-launch-file/][https://roboticsbackend.com/what-is-a-ros-launch-file/]
-
-Nadeem, H. [HassanNadeem]. (3 de Febrero, 2015). launching nodes in a new terminal with roslaunch [Publicación en un foro online]. Mensaje publicado en [https://answers.ros.org/question/30754/launching-nodes-in-a-new-terminal-with-roslaunch/][https://answers.ros.org/question/30754/launching-nodes-in-a-new-terminal-with-roslaunch/]
-
-Rodriguez, A. [Alfonso Rodriguez T]. (27 de Mayo, 2015). Save rqt_plot settings [Publicación en foro online]. Mensaje publicado en [https://answers.ros.org/question/209964/save-rqt_plot-settings/
-][https://answers.ros.org/question/209964/save-rqt_plot-settings/]
 
 Dattalo, A. (8 de Agosto del 2018). ¿Qué es ROS?. ROS wiki. Recuperado el 20 de Febrero de 2024 de http://wiki.ros.org/ROS/Introduction
-
-Open Robotics. (2021). ¿Por qué ROS?. ROS. Recuperado el 20 de Febrero del 2024 de https://www.ros.org/blog/why-ros/
 
 Joseph, L., & Cacace, J. (2018). Mastering ROS for Robotics Programming: Design, build, and simulate complex robots using the Robot Operating System. Packt Publishing Ltd.
 
 Macenski, S., Foote, T., Gerkey, B., Lalancette, C., & Woodall, W. (2022). Robot Operating System 2: Design, architecture, and uses in the wild. Science Robotics, 7(66), eabm6074.
 
+Manchester Robotics. (2024). Robot Operating System - ROS [Diapositivas de PowerPoint]. [https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf][https://github.com/ManchesterRoboticsLtd/TE3001B_Robotics_Foundation_2024/blob/main/Week1/Slides/2%20-%20MCR2_ROS_BASICS.pdf]
+
+Nadeem, H. [HassanNadeem]. (3 de Febrero, 2015). launching nodes in a new terminal with roslaunch [Publicación en un foro online]. Mensaje publicado en [https://answers.ros.org/question/30754/launching-nodes-in-a-new-terminal-with-roslaunch/][https://answers.ros.org/question/30754/launching-nodes-in-a-new-terminal-with-roslaunch/]
+
+Open Robotics. (2021). ¿Por qué ROS?. ROS. Recuperado el 20 de Febrero del 2024 de https://www.ros.org/blog/why-ros/
+
 Open Robotics. (2024). Documentacion: Galactic.https://docs.ros.org/en/galactic/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html
+
+Rodriguez, A. [Alfonso Rodriguez T]. (27 de Mayo, 2015). Save rqt_plot settings [Publicación en foro online]. Mensaje publicado en [https://answers.ros.org/question/209964/save-rqt_plot-settings/
+][https://answers.ros.org/question/209964/save-rqt_plot-settings/]
+
+The Robotics Back-End. (2019, February 4). What is a ROS launch file? The Robotics Back-End. [https://roboticsbackend.com/what-is-a-ros-launch-file/][https://roboticsbackend.com/what-is-a-ros-launch-file/]
+
+
+
+
+
+
+
+
