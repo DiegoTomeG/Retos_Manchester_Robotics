@@ -127,10 +127,11 @@ Posteriormente, se define un segundo método t_imer_callback_, el cual se encarg
 
 ```
 
-Posteriormente, para verificar el funcionamiento de la señal de entrada debe graficarse 
+Una forma simple realizar un debugg para el proceso hasta este punto es el de graficar la señal de entrada del programa. Esto se obtiene mediante el comando: 
 
-
-#### Nodo Process
+```
+$ ros2 run rqt_plot rqt_plot
+```
 
 #### Nodo Process
 
@@ -178,8 +179,10 @@ if __name__ == '__main__':
     main()
 ```
 
-
-
+Para compilar este segundo nodo, se debe abrir otra terminal y ejecutar los comandos previos para llevar a cabo el proceso de construcción. Una vez construido y para verificar el funcionamiento adecuado, se debe volver a graficar la función. 
+```
+$ ros2 run rqt_plot rqt_plot
+```
 
 
 
