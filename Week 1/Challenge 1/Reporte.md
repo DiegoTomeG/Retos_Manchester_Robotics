@@ -340,7 +340,7 @@ Vease los resultados en la siguiente sección.
 
 Como podemos observar a continuación primeramente vamos a ver nuestro diagrama, el cual correctamente se puede observar que los ovalos son los que se representan como nuestros nodos "signal_generator" y "process" además de que signal_generator tiene unas flechas apuntando a unos recuadros /time y /signal los cuales son los topicos en el que se estará publicando la hora t y por otro lado estará publicando valores de la señal senoidal utilizando un mensaje Float32 estandar de ROS. Justo el nodo de "process" subscribe estos dos topicos, procesando la señal recibida y modicandola haciendo que publique la señal modificada en el tópico /proc_signal
 
-![Screenshot from 2024-02-21 17-14-22](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/ba4b9614-2240-4b03-b0a4-18dc0c82a7f4)
+![WhatsApp Image 2024-02-21 at 20 38 39(1)](https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0)
 
 
 
