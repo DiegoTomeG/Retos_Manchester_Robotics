@@ -144,6 +144,8 @@ from rclpy.node import Node
 from std_msgs.msg import Float32 
 ```
 
+La estructura de la clase se mantiene igual, sin embargo deben realizarse las modificaciones pertinentes para que el nuevo nodo actúe como susbcriber en lugar de publisher. Por ejemplo, el nombre de la clase, los métodos y objetos. En cuanto a los tópicos, debe crearse uno publicaador (señal procesada) y dos suscriptores que se encargarán de leer la señal de entrada. 
+
 ```python
 class My_Subscriber(Node):
     def __init__(self): 
@@ -152,7 +154,26 @@ class My_Subscriber(Node):
         self.sub_signal = self.create_subscription(Float32, 'signal', self.signal_callback, 10)
         self.sub_time = self.create_subscription(Float32, 'time', self.time_signal_callback, 10)
 
-```  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Implementación del launch file
 
