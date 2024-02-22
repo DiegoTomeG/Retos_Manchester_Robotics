@@ -336,21 +336,21 @@ $ ros2 launch courseworks plotter_launch.py
 Véase los resultados en la siguiente sección. 
 ## Resultados
 
-Como podemos observar a continuación primeramente vamos a ver nuestro diagrama, el cual correctamente se puede observar que los óvalos son los que se representan como nuestros nodos "signal_generator" y "process" además de que signal_generator tiene unas flechas apuntando a unos recuadros /time y /signal los cuales son los topic en el que se estará publicando la hora _t_ y, por otro lado, estará publicando valores de la señal senoidal utilizando un mensaje Float32 estándar de ROS. Justo el nodo de "process" subscribe estos dos topic, procesando la señal recibida y modificándola haciendo que publique la señal modificada en el topic /proc_signal
+Como podemos observar a continuación en nuestro diagrama, se pueden identificar correctamente a los óvalos que representan a nuestros nodos "signal_generator" y "process". De igual forma, se observa que el nodo signal_generator tiene unas flechas apuntando a los recuadros /time y /signal los cuales son los topic en el que se estará publicando el timpoe _t_ y, por otro lado, estará publicando valores de la señal senoidal utilizando un mensaje Float32 estándar de ROS. Por último, nuestro diagrama muestra como el nodo de "process"  se subscribe a los topics previamente mencnionados, para posteriormente modificar la señal y publicandola en el topic /proc_signal
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/e9e694eb-fc6c-4e41-bf80-0bfbf82aedc0" width=600"> 
 </p>
 <p align="center">
 
-Lo siguiente que observamos son nuestras dos terminales ejecutándose el nodo "signal_generator" donde del lado izquierdo observamos como se van mostrando los datos del tiempo y también el dato de la señal senoidal que se están mandando. Del lado derecho tenemos ejecutándose el nodo "process" donde se observan los datos del tiempo que se recibe y también de la señal que ya es procesada, pero es recibida y se está publicando.
+Lo siguiente que observamos son nuestras dos terminales ejecutando el nodo "signal_generator" (lado izquierdo), donde se van mostrando los datos del tiempo y también el dato de la señal senoidal que se están mandando. Del lado derecho tenemos ejecutándose el nodo "process", donde se observan los datos del tiempo que se recibe y también de la señal que ya es procesada. 
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/6117d0de-de59-4794-8729-86efb8797001" width=800"> 
 </p>
 <p align="center">
 
-Por consiguiente, gracias al comando de ```ros2 run rqt_plot rqt_plot``` podemos visualizar la siguiente gráfica, la línea azul es la señal que se está mandando por el topic /signal del nodo "signal_generator" y graficándose correctamente como una onda senoidal. Por otro lado, tenemos la línea roja que es la señal ya procesada por el topic /proc_signal del nodo "process" mandando la señal pero modificando los parámetros de la original.
+Finalmente , gracias al comando de ```ros2 run rqt_plot rqt_plot``` podemos visualizar la siguiente gráfica, la línea azul es la señal que se está mandando por el topic /signal del nodo "signal_generator" y graficándose correctamente como una onda senoidal. Por otro lado, tenemos la línea roja que es la señal ya procesada por el topic /proc_signal del nodo "process" mandando la señal pero modificando los parámetros con respecto a la original.
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/0beb1519-3d75-4b44-8386-24f71a904641" width=800"> 
