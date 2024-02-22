@@ -359,9 +359,9 @@ Por consiguiente, gracias al comando de ```ros2 run rqt_plot rqt_plot``` podemos
 
 ### Comprobación
 
-Si desea comprobar los resultados obtenidos, puede descargar el archivo challenge_1.zip para poder verificarlo. Tendrá que ejecutar primeramente el comando de ```colcon build```, posteriormente ```source install/setup.bash``` y finalmente ```ros2 launch courseworks plotter_launch.py``` lo que le abrirá todas las ventanas que anteriormente ya hemos explicado en los resultados.
+Para comprobar los resultados obtenidos, puede descargar el archivo challenge_1.zip y verificarlo. Dentro de la carpeta challenge_1, tendrá que ejecutar el comando de ```colcon build```, posteriormente ```source install/setup.bash``` y finalmente ```ros2 launch courseworks plotter_launch.py```, lo que le abrirá todas las ventanas que anteriormente ya hemos explicado en los resultados.
 
-Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacía, pero puede agregar manualmente los topic en esta parte de la venta, donde pondremos el nombre de signal/data para poder mostrar la onda senoidal original y darles al botón de + también haremos lo mismo para proc_signal/data que mostrará la onda senoidal modificada y agregarla con el botón de +.
+Es posible que a la hora de ejecutar la ventana de rqt_plot pueda salir vacía, pero puede agregar manualmente los topicos en esta parte de la venta. Para ello, pondremos el nombre de signal/data para poder mostrar la onda senoidal original, agregandola con el botón + ubicado en la parte superior. Haremos lo mismo para proc_signal/data, lo que mostrará la onda senoidal modificada: 
 
 <p align="center">
   <img src="https://github.com/DiegoTomeG/Retos_Manchester_Robotics/assets/118226099/d0da2708-1813-413b-91ec-ce216cfc2fb8" width=700"> 
